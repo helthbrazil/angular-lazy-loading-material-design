@@ -1,0 +1,12 @@
+<div style="padding: 10px;">
+  <mat-form-field appearance="legacy">
+    <mat-label>CEP</mat-label>
+    <input [(ngModel)]="cep" type="text" matInput placeholder="Informe o CEP">
+    <mat-icon matSuffix>contact_mail</mat-icon>
+  </mat-form-field>
+</div>
+
+<app-botao (callbackEvent)="buscarCep($event)" label="Buscar Cep"></app-botao>
+
+<app-card [title]="dados?.uf" [subTitle]="dados?.localidade" [content]="dados?.logradouro">
+</app-card>
